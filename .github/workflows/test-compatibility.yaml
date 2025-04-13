@@ -6,7 +6,8 @@ on:
       - main
 
 jobs:
-  test:
+  test-compatibility:
+    if: github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
 
     steps:
@@ -28,6 +29,10 @@ jobs:
       - name: Install compatibility package from the branch
         working-directory: ./website-scraper-puppeteer
         run: npm install website-scraper/website-scraper-puppeteer-compatibility-bridge#${{ github.head_ref }} --save
+
+      - name: Disable AppArmor
+        if: ${{ matrix.os == 'ubuntu-latest' }}
+        run: echo 0 | sudo tee /proc/sys/kernel/apparmor_restrict_unprivileged_userns
 
       - name: Run tests
         working-directory: ./website-scraper-puppeteer
