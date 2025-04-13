@@ -9,6 +9,6 @@
   "author": "Illia Antypenko <illia@antypenko.dev>",
   "license": "MIT",
   "dependencies": {
-    "puppeteer": "^23.0.0"
+    "puppeteer": "^23.0.1"
   }
 }
