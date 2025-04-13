@@ -27,7 +27,7 @@ jobs:
 
       - name: Install compatibility package from the branch
         working-directory: ./website-scraper-puppeteer
-        run: npm install website-scraper/website-scraper-puppeteer-compatibility-bridge#{{ github.head_ref }} --save
+        run: npm install website-scraper/website-scraper-puppeteer-compatibility-bridge#${{ github.head_ref }} --save
 
       - name: Run tests
         working-directory: ./website-scraper-puppeteer
