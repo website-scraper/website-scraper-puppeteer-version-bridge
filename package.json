@@ -1,0 +1,14 @@
+{
+  "name": "website-scraper-puppeteer-compatibility-bridge",
+  "version": "2.0.0",
+  "description": "Compatibility bridge to support latest versions of puppeteer inside the website-scraper-puppeteer module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Illia Antypenko <illia@antypenko.dev>",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^23.0.0"
+  }
+}
