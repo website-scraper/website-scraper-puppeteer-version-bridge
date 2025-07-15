@@ -1,1 +1,1 @@
-# website-scraper-puppeteer-compatibility-bridge
+# website-scraper-puppeteer-version-bridge

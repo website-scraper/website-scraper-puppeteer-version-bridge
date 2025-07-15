@@ -23,9 +23,9 @@ jobs:
         working-directory: ./website-scraper-puppeteer
         run: npm install
 
-      - name: Install compatibility package from the branch
+      - name: Install version bridge package from the branch
         working-directory: ./website-scraper-puppeteer
-        run: npm install website-scraper/website-scraper-puppeteer-compatibility-bridge#${{ github.head_ref }} --save
+        run: npm install website-scraper/website-scraper-puppeteer-version-bridge#${{ github.head_ref }} --save
 
       - name: Disable AppArmor
         run: echo 0 | sudo tee /proc/sys/kernel/apparmor_restrict_unprivileged_userns
