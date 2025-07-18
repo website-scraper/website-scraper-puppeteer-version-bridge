@@ -2,7 +2,13 @@
   "name": "@website-scraper/puppeteer-version-bridge",
   "version": "0.7.0",
   "description": "Version bridge to support latest versions of puppeteer inside the website-scraper-puppeteer module",
-  "main": "index.js",
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
