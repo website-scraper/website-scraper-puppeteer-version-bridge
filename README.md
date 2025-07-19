@@ -1,1 +1,1 @@
-# website-scraper-puppeteer-version-bridge
+# @website-scraper/puppeteer-version-wrapper

@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout your repository (PR)
+      - name: Checkout website-scraper-puppeteer
         uses: actions/checkout@v4
-
-      - name: Clone website-scraper-puppeteer
-        run: git clone --single-branch --branch add-compatibility-bridge https://github.com/website-scraper/website-scraper-puppeteer.git
+        with:
+          repository: website-scraper/website-scraper-puppeteer
+          ref: add-compatibility-bridge
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -22,16 +22,13 @@ jobs:
           node-version: '22'
 
       - name: Install dependencies
-        working-directory: ./website-scraper-puppeteer
         run: npm install
 
       - name: Install version bridge package from the branch
-        working-directory: ./website-scraper-puppeteer
-        run: npm install website-scraper/website-scraper-puppeteer-version-bridge#${{ github.head_ref }} --save
+        run: npm install website-scraper/puppeteer-version-wrapper#${{ github.head_ref }} --save
 
       - name: Disable AppArmor
         run: echo 0 | sudo tee /proc/sys/kernel/apparmor_restrict_unprivileged_userns
 
       - name: Run tests
-        working-directory: ./website-scraper-puppeteer
         run: npm test

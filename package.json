@@ -1,7 +1,7 @@
 {
-  "name": "@website-scraper/puppeteer-version-bridge",
-  "version": "0.7.0",
-  "description": "Version bridge to support latest versions of puppeteer inside the website-scraper-puppeteer module",
+  "name": "@website-scraper/puppeteer-version-wrapper",
+  "version": "0.1.0",
+  "description": "Wrapper to support latest versions of puppeteer inside the website-scraper-puppeteer module",
   "type": "module",
   "exports": {
     ".": "./index.js"
